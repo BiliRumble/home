@@ -5,7 +5,6 @@
 </template>
 
 <script>
-console.debug("[debug] BackgroundUrl = " + bgUrl);
 </script>
 
 <style lang="scss" scoped>
