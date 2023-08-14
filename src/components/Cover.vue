@@ -1,10 +1,6 @@
 <template>
     <div class="cover focus">
-      <img
-        class="background"
-        alt="background"
-        src="https://api.dujin.org/bing/1920.php"
-      />
+      <img class="background" alt="background" src="https://api.dujin.org/bing/1920.php"/>
     </div>
 </template>
 
