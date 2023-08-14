@@ -15,7 +15,8 @@ onMounted(async () => {
   try {
     const response = await axios.get(`https://api.github.com/repos/BiliRumble/home/commits`);
 
-    const fullSha = response.data.sha;
+    const lcommit = response.data[0];
+    const fullSha = lcommit.sha;
     commitSha.value = fullSha.substring(0, 7);
   } catch (error) {
     commitSha.value = "获取出现错误。"
