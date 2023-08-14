@@ -1,7 +1,7 @@
 <template>
     <footer class="footer">
         Copyright © rumble
-        GIT: {{ getCommitSha }}
+        GIT: {{ CommitSha }}
     </footer>
 </template>
 
@@ -9,13 +9,9 @@
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
 
-const commitSha = ref<string | null>(null);
+const commitSha = ref("");
 
-onMounted(() => {
-  getCommitSha();
-});
-
-async function getCommitSha() {
+onMounted(async () => {
   try {
     const response = await axios.get(`https://api.github.com/repos/BiliRumble/home/commits`);
 
@@ -24,7 +20,7 @@ async function getCommitSha() {
   } catch (error) {
     console.error("[error] Failed to get GithubAPI: " + error);
   }
-}
+});
 </script>
 
 <style lang="scss" scoped>
