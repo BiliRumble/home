@@ -3,14 +3,12 @@
       <img
         class="background"
         alt="background"
-        :src="bgUrl"
+        src="https://api.dujin.org/bing/1920.php"
       />
     </div>
 </template>
 
 <script>
-const bgUrl = "https://api.dujin.org/bing/1920.php";
-
 console.debug("[debug] BackgroundUrl = " + bgUrl);
 </script>
 
