@@ -9,13 +9,8 @@
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
 
-const commitSha = ref<string | null>(null);
-
-onMounted(() => {
-  getCommitSha();
-});
-
-async function getCommitSha() {
+const commitSha = ref("");
+onMounted(async () => {
   try {
     const response = await axios.get(`https://api.github.com/repos/BiliRumble/home/commits`);
 
@@ -24,7 +19,7 @@ async function getCommitSha() {
   } catch (error) {
     console.error("[error] Failed to get GithubAPI: " + error);
   }
-}
+});
 </script>
 
 <style lang="scss" scoped>
