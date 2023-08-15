@@ -43,6 +43,14 @@ nav {
     margin-top: 10px;
 }
 
+
+.list {
+    display: flex;
+    margin-top: 15px;
+    text-align: center;
+}
+
+
 .navigation {
     display: inline-block;
     /*float: left;*/
@@ -51,12 +59,7 @@ nav {
     margin-top: 20px;
     list-style-type: none;
     margin-top: 10px;
-}
-
-
-.list {
-    margin-top: 15px;
-    text-align: center;
+    flex-wrap: wrap;
 }
 
 .navigation__item {
