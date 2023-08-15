@@ -43,7 +43,6 @@ nav {
     margin-top: 10px;
 }
 
-
 .list {
     display: flex;
     margin-top: 15px;
@@ -60,6 +59,10 @@ nav {
     list-style-type: none;
     margin-top: 10px;
     flex-wrap: wrap;
+}
+
+.navigation:hover {
+    transform: translateY(10px);
 }
 
 .navigation__item {
