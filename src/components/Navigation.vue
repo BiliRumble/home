@@ -38,10 +38,11 @@
 nav {
     display: inline-block;
     position: absolute;
-
     left: 50%;
+    transform: translate(-50%, -50%);
     margin-top: 10px;
 }
+
 
 .list {
     display: flex;
@@ -65,7 +66,7 @@ nav {
 .navigation:hover {
     color: #f4f4f4;
     border-color: #fff;
-    opacity: 1;
+    opacity: 1
 }
 
 .navigation__item {
