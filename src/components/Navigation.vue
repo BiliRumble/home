@@ -39,8 +39,10 @@ nav {
     display: inline-block;
     position: absolute;
     left: 50%;
+    transform: translate(-50%, -50%);
     margin-top: 10px;
 }
+
 
 .list {
     display: flex;
@@ -58,15 +60,13 @@ nav {
     list-style-type: none;
     margin-top: 10px;
     flex-wrap: wrap;
-    animation: navigation 0.2s linear;
     color: #f4f4f4;
 }
 
 .navigation:hover {
     color: #f4f4f4;
     border-color: #fff;
-    opacity: 1;
-    animation: none;
+    opacity: 1
 }
 
 .navigation__item {
@@ -146,14 +146,5 @@ i {
         width: 100%;
         margin: 0 0 .4em 0;
     }
-}
-
-@keyframes navigation{
-	0%{
-		transform: translateY(0px);
-	}
-	100%{
-		transform: translateY(-2px);
-	}
 }
 </style>
