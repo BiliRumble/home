@@ -59,10 +59,13 @@ nav {
     list-style-type: none;
     margin-top: 10px;
     flex-wrap: wrap;
-    animation: navigation 1s linear;
+    animation: navigation 0.2s linear;
 }
 
 .navigation:hover {
+    color: #fff;
+    border-color: #fff;
+    opacity: 1；
     animation: none;
 }
 
@@ -150,7 +153,7 @@ i {
 		transform: translateY(0px);
 	}
 	100%{
-		transform: translateY(-5px);
+		transform: translateY(-2px);
 	}
 }
 </style>
