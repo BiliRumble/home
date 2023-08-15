@@ -60,12 +60,13 @@ nav {
     margin-top: 10px;
     flex-wrap: wrap;
     animation: navigation 0.2s linear;
+    color: #f4f4f4;
 }
 
 .navigation:hover {
-    color: #fff;
+    color: #f4f4f4;
     border-color: #fff;
-    opacity: 1；
+    opacity: 1;
     animation: none;
 }
 
