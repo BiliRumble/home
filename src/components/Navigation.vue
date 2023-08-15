@@ -63,12 +63,6 @@ nav {
     color: #f4f4f4;
 }
 
-.navigation:hover {
-    color: #f4f4f4;
-    border-color: #fff;
-    opacity: 1
-}
-
 .navigation__item {
     display: inline-block;
     margin: 5px 1px 0 0;
@@ -78,8 +72,8 @@ nav {
 .navigation__item a {
     display: block;
     position: relative;
-    border-color: rgb(255,255,255);
-    color: rgb(255,255,255);
+    border-color: #f4f4f4;
+    color: #f4f4f4;
     opacity: .8;
 }
 
