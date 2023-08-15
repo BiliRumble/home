@@ -59,10 +59,11 @@ nav {
     list-style-type: none;
     margin-top: 10px;
     flex-wrap: wrap;
+    animation: navigation 1s linear;
 }
 
 .navigation:hover {
-    transform: translateY(10px);
+    animation: none;
 }
 
 .navigation__item {
@@ -142,5 +143,14 @@ i {
         width: 100%;
         margin: 0 0 .4em 0;
     }
+}
+
+@keyframes navigation{
+	0%{
+		transform: translateY(0px);
+	}
+	100%{
+		transform: translateY(-5px);
+	}
 }
 </style>
