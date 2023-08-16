@@ -60,7 +60,7 @@ nav {
     list-style-type: none;
     margin-top: 10px;
     flex-wrap: wrap;
-    color: #f4f4f4;
+    color: rgb(255,255,255);
 }
 
 .navigation__item {
@@ -72,8 +72,8 @@ nav {
 .navigation__item a {
     display: block;
     position: relative;
-    border-color: #f4f4f4;
-    color: #f4f4f4;
+    border-color: rgb(255,255,255);
+    color: rgb(255,255,255);
     opacity: .8;
 }
 
@@ -95,7 +95,7 @@ i {
     font-weight: normal;
     font-style: normal;
     font-size: 18px;
-    color: rgb(200, 200, 200);
+    color: rgb(251, 255, 247);
     transition: all 0.3s;
 }
 
