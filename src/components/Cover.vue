@@ -15,7 +15,7 @@
   background-color: var(--body-background-color);
   &.focus {
     .background {
-      filter: blur(0.50px) brightness(1.0);
+      filter: blur(10px) brightness(0.8);
       transform: scale(1.1);
     }
   }
