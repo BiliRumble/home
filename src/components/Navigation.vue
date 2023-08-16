@@ -95,14 +95,13 @@ i {
     font-weight: normal;
     font-style: normal;
     font-size: 18px;
-    color: rgb(255,255,255);
+    color: rgb(200, 200, 200);
     transition: all 0.3s;
-    box-shadow: 0px 5px 12px rgba(0,0,0,0.5);
 }
 
-.i:hover {
+i:hover {
     transform: translateY(-2px) scale(1.01,1.01);
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+    color: rgb(255, 255, 255);
 }
 
 .social {
