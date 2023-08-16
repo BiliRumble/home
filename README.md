@@ -26,6 +26,10 @@ yarn build
 
 ## 关于
 
+### 灵感来源
+* [DMEGO Home](https://i.dmego.cn/)
+* [無名の主页](https://www.imsyy.top/)
+
 ### 功能
 
 - [ ] 载入动画
