@@ -10,12 +10,6 @@
   height: 100%;
   position: relative;
   background-color: var(--body-background-color);
-  &.focus {
-    .background {
-      filter: blur(10px) brightness(0.8);
-      transform: scale(1.1);
-    }
-  }
   .background {
     position: absolute;
     left: 0;
