@@ -77,12 +77,6 @@ nav {
     opacity: .8;
 }
 
-.navigation__item a:hover {
-    color: rgb(255,255,255);
-    border-color: rgb(255,255,255);
-    opacity: 1;
-}
-
 .navigation--social a {
     border: 0;
     padding: 6px 8px 6px 9px;
@@ -102,6 +96,11 @@ i {
     font-style: normal;
     font-size: 18px;
     color: rgb(255,255,255);
+    transition: all 0.3s;
+}
+
+i:hover {
+    transform: translateY(-2px) scale(1.01,1.01);
 }
 
 .social {
