@@ -1,29 +1,8 @@
 <template>
   <div class="cover">
-    <img class="background" alt="background" :src="url"/>
+    <img class="background" alt="background" src="https://api.dujin.org/bing/1920.php"/>
   </div>
 </template>
-
-<script setup>
-import { ref } from 'vue';
-
-// 随机壁纸
-const bgRandom = Math.floor(Math.random() * 3 + 1);
-const url = ref(null);
-
-if (bgRandom==1) {
-  url.value="https://api.dujin.org/bing/1920.php"
-}
-if (bgRandom==2) {
-  url.value="https://api.btstu.cn/sjbz/api.php?lx=fengjing&format=images";
-}
-if (bgRandom==3) {
-  url.value="https://api.btstu.cn/sjbz/api.php?lx=dongman&format=images";
-}
-if (url.value==null) {
-  url.value="https://api.dujin.org/bing/1920.php";
-}
-</script>
 
 <style lang="scss" scoped>
 .cover {
