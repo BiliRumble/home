@@ -23,7 +23,7 @@
             </li>
 
             <li class="navigation">
-                <a href="javascript:decryptEmail('bilirumble@outlook.com');" title="email">
+                <a href="mailto:bilirumble@outlook.com" title="email" target="_blank">
                     <i class="fa-solid fa-envelope"></i>
                     <span class="label">Email</span>
                 </a>
