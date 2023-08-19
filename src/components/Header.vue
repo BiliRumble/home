@@ -1,11 +1,6 @@
 <template>
     <div class="div">
-        <img
-        :class="[
-            'avatar',
-        ]"
-        src="https://q2.qlogo.cn/headimg_dl?dst_uin=2951327332&spec=100"
-        />
+        <img class="avatar" src="/images/avatar.png"/>
 
         <h1 class="name">rumble</h1>
         <p class="description">兴趣使然</p>
