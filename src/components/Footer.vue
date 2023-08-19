@@ -22,7 +22,5 @@ const currentYear = ref<number>(new Date().getFullYear());
     font-size: 14px;
     color: var(--main-text-color);
     z-index: 1;
-
-    
 }
 </style>

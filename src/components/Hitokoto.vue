@@ -30,9 +30,8 @@ onMounted(async () => {
 
 <style>
 .hitokoto {
-    
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: var(--main-text-color);
 }
 
 .bar {
