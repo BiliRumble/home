@@ -60,7 +60,7 @@ nav {
     list-style-type: none;
     margin-top: 10px;
     flex-wrap: wrap;
-    color: rgb(255,255,255);
+    color: var(--main-text-color);
 }
 
 .navigation__item {
@@ -73,7 +73,7 @@ nav {
     display: block;
     position: relative;
     border-color: rgb(255,255,255);
-    color: rgb(255,255,255);
+    color: var(--main-text-color);
     opacity: .8;
 }
 

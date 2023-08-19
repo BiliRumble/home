@@ -1,7 +1,7 @@
 <template>
   <cover />
   
-  <div class="main">
+  <div class="Main">
     <headertab />
   </div>
 

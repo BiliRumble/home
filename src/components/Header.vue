@@ -1,11 +1,6 @@
 <template>
     <div class="div">
-        <img
-        :class="[
-            'avatar',
-        ]"
-        src="https://q2.qlogo.cn/headimg_dl?dst_uin=2951327332&spec=100"
-        />
+        <img class="avatar" src="/images/avatar.png"/>
 
         <h1 class="name">rumble</h1>
         <p class="description">兴趣使然</p>
@@ -34,13 +29,10 @@ import hitokoto from './Hitokoto.vue'
   position: relative;
   overflow: hidden;
   background: rgb(136, 172, 219);
-  -webkit-transition: all .2s ease-in;
-  display: -webkit-box;
   -webkit-box-orient: horizontal;
   -webkit-box-pack: center;
   -webkit-box-align: center;
   text-align: center;
-
   -webkit-box-shadow: 5px 5px 5px 10px rgba(255, 255, 255, 0),0px 2px 20px 3px rgba(0,0,0,0.25);
   box-shadow: 5px 5px 10px rgba(255, 255, 255, 0),0px 2px 20px 3px rgba(0, 0, 0, 0.25);
 }
@@ -48,13 +40,13 @@ import hitokoto from './Hitokoto.vue'
 .name {
   font-size: 2.5em;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: var(--main-text-color);
 }
 
 .description {
   font-size: 1em;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: var(--main-text-color);
 }
 
 .hr {
