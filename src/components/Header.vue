@@ -35,6 +35,11 @@ import hitokoto from './Hitokoto.vue'
   text-align: center;
   -webkit-box-shadow: 5px 5px 5px 10px rgba(255, 255, 255, 0),0px 2px 20px 3px rgba(0,0,0,0.25);
   box-shadow: 5px 5px 10px rgba(255, 255, 255, 0),0px 2px 20px 3px rgba(0, 0, 0, 0.25);
+  transition: all 1.25s ease;
+}
+
+.avatar:hover {
+    transform: rotate(360deg);
 }
 
 .name {
