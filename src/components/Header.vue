@@ -1,5 +1,5 @@
 <template>
-    <div class="div">
+    <div>
         <img class="avatar" src="/images/avatar.png"/>
 
         <h1 class="name">rumble</h1>
