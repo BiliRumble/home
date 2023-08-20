@@ -19,7 +19,7 @@
 </template>
 
 <script setup>
-import SocialLinks from "../assets/SocialLinks.json";
+import SocialLinks from "@/assets/SocialLinks.json";
 
 const label = SocialLinks.title;
 </script>
