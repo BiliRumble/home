@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import navigation from './Navigation.vue';
+import navigation from './SocialLinks.vue';
 import hitokoto from './Hitokoto.vue'
 </script>
 
