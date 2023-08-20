@@ -4,19 +4,8 @@
 
         <h1 class="name">rumble</h1>
         <p class="description">兴趣使然</p>
-
-        <hr class="hr">
-
-        <hitokoto />
-
-        <navigation />
     </div>
 </template>
-
-<script setup lang="ts">
-import navigation from './SocialLinks.vue';
-import hitokoto from './Hitokoto.vue'
-</script>
 
 <style lang="scss" scoped>
 .avatar {
@@ -52,13 +41,6 @@ import hitokoto from './Hitokoto.vue'
   font-size: 1em;
   text-align: center;
   color: var(--main-text-color);
-}
-
-.hr {
-  width: 50%;
-  margin: 20px auto;
-  text-align: center;
-  border-top: 1px solid rgba(255,255,255,0.50)
 }
 
 @media all and (max-width: 1100px) {
