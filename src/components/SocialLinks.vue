@@ -2,37 +2,27 @@
     <nav class="cover-navigation navigation--social">
         <ul class="list">
             <li class="navigation">
-                <a href="https://github.com/bilirumble/" title="github" target="_blank">
-                    <i class="fa-brands fa-github"></i>
-                    <span class="label">Github</span>
-                </a>
-            </li>
-
-            <li class="navigation">
-                <a href="https://wpa.qq.com/msgrd?v=3&uin=2951327332&site=qq&menu=yes" title="QQ" target="_blank">
-                    <i class="fa-brands fa-qq"></i>
-                    <span class="label">QQ</span>
-                </a>
-            </li>
-
-            <li class="navigation">
-                <a href="https://space.bilibili.com/475403704/" title="bilibili" target="_blank">
-                    <i class="fa-brands fa-bilibili"></i>
-                    <span class="label">BiliBili</span>
-                </a>
-            </li>
-
-            <li class="navigation">
-                <a href="mailto:bilirumble@outlook.com" title="email" target="_blank">
-                    <i class="fa-solid fa-envelope"></i>
-                    <span class="label">Email</span>
+                <a
+                v-for="item in SocialLinks"
+                :href="item.url"
+                :title="item.title"
+                target="_blank"
+                >
+                    <i
+                    :class="item.icon"
+                    />
+                    <span class="label">{{ label }}</span>
                 </a>
             </li>
         </ul>
     </nav>
 </template>
 
-<script setup lang="ts"></script>
+<script setup>
+import SocialLinks from "@/assets/SocialLinks.json";
+
+const label = SocialLinks.title;
+</script>
 
 <style scoped lang="scss">
 nav {

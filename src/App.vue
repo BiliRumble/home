@@ -2,16 +2,18 @@
   <cover />
   
   <div class="main">
-    <headertab />
+    <Up />
+    <Down />
   </div>
 
   <footerbar />
 </template>
 
 <script setup lang="ts">
-import footerbar from './components/Footer.vue';
-import cover from './components/Cover.vue';
-import headertab from './components/Header.vue';
+import footerbar from '@/components/Footer.vue';
+import cover from '@/components/Cover.vue';
+import Up from '@/views/Up.vue';
+import Down from '@/views/Down.vue';
 
 document.oncontextmenu = () => {
     console.debug("[debug] disable contextmenu.");
