@@ -26,41 +26,27 @@ const label = SocialLinks.title;
 
 <style scoped lang="scss">
 nav {
-    display: inline-block;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-top: 10px;
 }
 
 .list {
     display: flex;
-    margin-top: 15px;
     text-align: center;
 }
 
-
 .navigation {
-    display: inline-block;
-    /*float: left;*/
-    position: relative;
-    margin: 0;
-    margin-top: 20px;
     list-style-type: none;
-    margin-top: 10px;
     flex-wrap: wrap;
     color: var(--main-text-color);
 }
 
 .navigation__item {
-    display: inline-block;
-    margin: 5px 1px 0 0;
     line-height: 1em;
 }
 
 .navigation__item a {
-    display: block;
-    position: relative;
     border-color: rgb(255,255,255);
     color: var(--main-text-color);
     opacity: .8;
@@ -76,7 +62,6 @@ nav {
 }
 
 .navigation--social a .icon {
-    display: block;
     font-size: 1.7em;
 }
 
@@ -99,35 +84,20 @@ i:hover {
 
 .icon-social {
     font-size: 22px;
-    display: block;
     position: relative;
-}
-
-@media all and (max-width: 1100px) {
-    .navigation--social {
-        margin-top: 5px;
-        margin-left: 0
-    }
 }
 
 @media all and (max-width: 960px) {
     .cover-navigation .navigation li {
         width: 80%;
-        margin-bottom: .4em;
-    }
-
-    .cover-navigation.navigation--social {
-        padding-top: 5px;
     }
 
     .cover-navigation.navigation--social .navigation li {
-        display: inline-block;
         width: 20%;
     }
 
     .navigation__item {
         width: 100%;
-        margin: 0 0 .4em 0;
     }
 }
 </style>
