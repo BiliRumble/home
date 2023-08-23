@@ -1,7 +1,7 @@
 <template>
     <nav class="cover-navigation navigation--social">
-        <ul class="list">
-            <li class="navigation">
+        <ul class="navigation">
+            <li class="navigation__item">
                 <a
                 v-for="item in SocialLinks"
                 :href="item.url"
@@ -29,14 +29,12 @@ nav {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-.list {
-    display: flex;
-    text-align: center;
+    margin-top: 15px;
 }
 
 .navigation {
+    display: flex;
+    text-align: center;
     list-style-type: none;
     flex-wrap: wrap;
     color: var(--main-text-color);
