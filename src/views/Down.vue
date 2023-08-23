@@ -1,5 +1,7 @@
 <template>
-    <SocialLinks />
+    <div>
+        <SocialLinks />
+    </div>
 </template>
 
 <script setup lang="ts">
