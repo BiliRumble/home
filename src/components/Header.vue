@@ -2,10 +2,17 @@
     <div>
         <img class="avatar" src="/images/avatar.png"/>
 
-        <h1 class="name">rumble</h1>
-        <p class="description">兴趣使然</p>
+        <h1 class="name">{{ name }}</h1>
+        <p class="description">{{ des }}</p>
     </div>
 </template>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+
+const name = ref(import.meta.env.VITE_DESC_NAME);
+const des = ref(import.meta.env.VITE_DESC_DES);
+</script>
 
 <style lang="scss" scoped>
 .avatar {

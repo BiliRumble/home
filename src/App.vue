@@ -1,6 +1,6 @@
 <template>
   <cover />
-  
+
   <div class="main">
     <Up />
     <Down />
@@ -12,6 +12,7 @@
 <script setup lang="ts">
 import footerbar from '@/components/Footer.vue';
 import cover from '@/components/Cover.vue';
+
 import Up from '@/views/Up.vue';
 import Down from '@/views/Down.vue';
 
