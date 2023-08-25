@@ -19,9 +19,9 @@ export default {
   setup() {
     const show = ref(true);
 
-    onMounted(() => {
-      show.value = false;
-    });
+    window.onload = ()=> {
+        show.value = false;
+    }
 
     const title = ref(import.meta.env.VITE_SITE_TITLE);
 
