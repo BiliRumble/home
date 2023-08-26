@@ -31,7 +31,7 @@ const des = ref(import.meta.env.VITE_DESC_DES);
   text-align: center;
   -webkit-box-shadow: 5px 5px 5px 10px rgba(255, 255, 255, 0),0px 2px 20px 3px rgba(0,0,0,0.25);
   box-shadow: 5px 5px 10px rgba(255, 255, 255, 0),0px 2px 20px 3px rgba(0, 0, 0, 0.25);
-  transition: all 1.25s ease;
+  transition: all 1.00s ease;
 }
 
 .avatar:hover {
@@ -42,12 +42,14 @@ const des = ref(import.meta.env.VITE_DESC_DES);
   font-size: 2.5em;
   text-align: center;
   color: var(--main-text-color);
+  transition: all 1.00s ease;
 }
 
 .description {
   font-size: 1em;
   text-align: center;
   color: var(--main-text-color);
+  transition: all 1.00s ease;
 }
 
 @media all and (max-width: 1100px) {
@@ -73,13 +75,6 @@ const des = ref(import.meta.env.VITE_DESC_DES);
 
     .description {
         font-size: .9em
-    }
-
-    .hr {
-        width: 100%;
-        margin: 20px auto;
-        text-align: center;
-        border-top: 1px solid rgba(255,255,255,0.50)
     }
 }
 </style>

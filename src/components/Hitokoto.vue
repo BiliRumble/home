@@ -1,10 +1,10 @@
 <template>
-<div class="bar">
-    <p id="hitokoto" class="hitokoto iUp up">
-        {{ hitokoto }}<br>
-         -「<strong>{{ from }}</strong>」
-    </p>
-</div>
+    <div>
+        <p id="hitokoto" class="hitokoto">
+            {{ hitokoto }}<br>
+             -「<strong>{{ from }}</strong>」
+        </p>
+    </div>
 </template>
 
 <script setup lang="ts">
@@ -32,12 +32,12 @@ onMounted(async () => {
 .hitokoto {
     text-align: center;
     color: var(--main-text-color);
+    transition: all 1.00s ease;
 }
 
 .bar {
     margin-top: 10px;
     margin-bottom: 10px;
-    
 }
 
 @media all and (max-width: 1100px) {

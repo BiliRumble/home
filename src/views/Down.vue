@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="Down">
         <SocialLinks />
     </div>
 </template>
