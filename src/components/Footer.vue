@@ -36,4 +36,11 @@ a {
   text-decoration: none;
   color: var(--main-text-color);
 }
+
+
+@media all and (max-height: 960px) {
+  .footer {
+    visibility: visible;
+  }
+}
 </style>
