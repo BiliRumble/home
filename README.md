@@ -43,6 +43,7 @@ yarn build
 * [Vue 3](https://cn.vuejs.org/)
 * [Vite](https://vitejs.cn/vite3-cn/)
 * [TypeScript](https://www.typescriptlang.org/)
+* [Scss](https://sass-lang.com/)
 
 ### API
 
