@@ -29,17 +29,14 @@ onMounted(async () => {
 </script>
 
 <style>
+/* 一言样式 */
 .hitokoto {
     text-align: center;
     color: var(--main-text-color);
     transition: all 1.00s ease;
 }
 
-.bar {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
+/* 自适应 */
 @media all and (max-width: 1100px) {
     .hitokoto {
         display: block;

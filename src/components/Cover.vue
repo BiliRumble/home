@@ -1,10 +1,11 @@
 <template>
   <div class="cover">
-    <img class="background" alt="background" src="https://api.dujin.org/bing/1920.php"/>
+    <img class="background" alt="Background" src="https://api.dujin.org/bing/1920.php"/>
   </div>
 </template>
 
 <style lang="scss" scoped>
+/* 背景样式 */
 .cover {
 width: 100%;
 height: 100%;

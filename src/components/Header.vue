@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img class="avatar" src="/images/avatar.png"/>
+        <img class="avatar" src="/images/avatar.png" alt="avatar"/>
 
         <h1 class="name">{{ name }}</h1>
         <p class="description">{{ des }}</p>
@@ -15,6 +15,7 @@ const des = ref(import.meta.env.VITE_DESC_DES);
 </script>
 
 <style lang="scss" scoped>
+/* Header样式 */
 .avatar {
   text-align: center;
   display: block;
@@ -52,6 +53,7 @@ const des = ref(import.meta.env.VITE_DESC_DES);
   transition: all 1.00s ease;
 }
 
+/* 自适应 */
 @media all and (max-width: 1100px) {
     .avatar {
         width: 100px;

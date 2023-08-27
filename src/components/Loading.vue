@@ -3,10 +3,10 @@
     <div id="loader"></div>
     <div class="loader-section section-left"></div>
     <div class="loader-section section-right"></div>
-    <div class="load_title">
-      {{ title }}
-      <br>
-      <span>加载中</span>
+
+    <div class="loader-text">
+      <span class="name">{{ title }}</span>
+      <p class="tip">加载中</p>
     </div>
   </div>
 </template>
@@ -34,13 +34,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.chromeframe {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
+/* 加载页样式 */
 #loader-wrapper {
   position: fixed;
   top: 0;
@@ -60,18 +54,12 @@ export default {
   margin: -75px 0 0 -75px;
   border-radius: 50%;
   border: 3px solid transparent;
-  /* COLOR 1 */
   border-top-color: #FFF;
   -webkit-animation: spin 2s linear infinite;
-  /* Chrome, Opera 15+, Safari 5+ */
   -ms-animation: spin 2s linear infinite;
-  /* Chrome, Opera 15+, Safari 5+ */
   -moz-animation: spin 2s linear infinite;
-  /* Chrome, Opera 15+, Safari 5+ */
   -o-animation: spin 2s linear infinite;
-  /* Chrome, Opera 15+, Safari 5+ */
   animation: spin 2s linear infinite;
-  /* Chrome, Firefox 16+, IE 10+, Opera */
   z-index: 1001;
 }
 
@@ -84,18 +72,12 @@ export default {
   bottom: 5px;
   border-radius: 50%;
   border: 3px solid transparent;
-  /* COLOR 2 */
   border-top-color: #FFF;
   -webkit-animation: spin 3s linear infinite;
-  /* Chrome, Opera 15+, Safari 5+ */
   -moz-animation: spin 3s linear infinite;
-  /* Chrome, Opera 15+, Safari 5+ */
   -o-animation: spin 3s linear infinite;
-  /* Chrome, Opera 15+, Safari 5+ */
   -ms-animation: spin 3s linear infinite;
-  /* Chrome, Opera 15+, Safari 5+ */
   animation: spin 3s linear infinite;
-  /* Chrome, Firefox 16+, IE 10+, Opera */
 }
 
 #loader:after {
@@ -108,57 +90,11 @@ export default {
   border-radius: 50%;
   border: 3px solid transparent;
   border-top-color: #FFF;
-  /* COLOR 3 */
   -moz-animation: spin 1.5s linear infinite;
-  /* Chrome, Opera 15+, Safari 5+ */
   -o-animation: spin 1.5s linear infinite;
-  /* Chrome, Opera 15+, Safari 5+ */
   -ms-animation: spin 1.5s linear infinite;
-  /* Chrome, Opera 15+, Safari 5+ */
   -webkit-animation: spin 1.5s linear infinite;
-  /* Chrome, Opera 15+, Safari 5+ */
   animation: spin 1.5s linear infinite;
-  /* Chrome, Firefox 16+, IE 10+, Opera */
-}
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: rotate(0deg);
-    /* IE 9 */
-    transform: rotate(0deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: rotate(360deg);
-    /* IE 9 */
-    transform: rotate(360deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
-}
-
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: rotate(0deg);
-    /* IE 9 */
-    transform: rotate(0deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: rotate(360deg);
-    /* IE 9 */
-    transform: rotate(360deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
 }
 
 #loader-wrapper .loader-section {
@@ -167,14 +103,9 @@ export default {
   width: 51%;
   height: 100%;
   background: var(--body-background-color);
-  /* Old browsers */
   z-index: 1000;
   -webkit-transform: translateX(0);
-  /* Chrome, Opera 15+, Safari 3.1+ */
-  -ms-transform: translateX(0);
-  /* IE 9 */
   transform: translateX(0);
-  /* Firefox 16+, IE 10+, Opera */
 }
 
 #loader-wrapper .loader-section.section-left {
@@ -185,74 +116,53 @@ export default {
   right: 0;
 }
 
-/* Loaded */
-.loaded #loader-wrapper .loader-section.section-left {
-  -webkit-transform: translateX(-100%);
-  /* Chrome, Opera 15+, Safari 3.1+ */
-  -ms-transform: translateX(-100%);
-  /* IE 9 */
-  transform: translateX(-100%);
-  /* Firefox 16+, IE 10+, Opera */
-  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-}
-
-.loaded #loader-wrapper .loader-section.section-right {
-  -webkit-transform: translateX(100%);
-  /* Chrome, Opera 15+, Safari 3.1+ */
-  -ms-transform: translateX(100%);
-  /* IE 9 */
-  transform: translateX(100%);
-  /* Firefox 16+, IE 10+, Opera */
-  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-}
-
-.loaded #loader {
-  opacity: 0;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-
-.loaded #loader-wrapper {
-  visibility: hidden;
-  -webkit-transform: translateY(-100%);
-  /* Chrome, Opera 15+, Safari 3.1+ */
-  -ms-transform: translateY(-100%);
-  /* IE 9 */
-  transform: translateY(-100%);
-  /* Firefox 16+, IE 10+, Opera */
-  -webkit-transition: all 0.3s 1s ease-out;
-  transition: all 0.3s 1s ease-out;
-}
-
-/* JavaScript Turned Off */
-.no-js #loader-wrapper {
-  display: none;
-}
-
-.no-js h1 {
-  color: #222222;
-}
-
-#loader-wrapper .load_title {
-  font-family: 'Open Sans';
-  color: #FFF;
-  font-size: 19px;
+/* 标题 */
+#loader-wrapper .loader-text {
   width: 100%;
   text-align: center;
   z-index: 9999999999999;
   position: absolute;
   top: 60%;
   opacity: 1;
+  margin-top: 40px;
   line-height: 30px;
 }
 
-#loader-wrapper .load_title span {
+#loader-wrapper .loader-text .name {
+  color: var(--main-text-color);
+  z-index: 2;
+  font-size: 24px;
+}
+
+#loader-wrapper .loader-text .tip {
   font-weight: normal;
-  font-style: italic;
-  font-size: 13px;
-  color: #FFF;
-  opacity: 0.5;
+  font-size: 18px;
+  color: var(--main-text-color);
+  opacity: 0.6;
+}
+
+/* 动画 */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 </style>

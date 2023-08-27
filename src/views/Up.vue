@@ -20,6 +20,7 @@ import Hitokoto from '@/components/Hitokoto.vue';
   transition: all 1.00s ease;
 }
 
+/* 自适应 */
 @media all and (max-width: 1100px) {
   .hr {
     width: 55%;
