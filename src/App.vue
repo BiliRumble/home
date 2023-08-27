@@ -26,6 +26,7 @@ document.oncontextmenu = () => {
 </script>
 
 <style scoped lang="scss">
+/* main样式 */
 .main {
   position: absolute;
   width: 50%;

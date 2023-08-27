@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-      Copyright © 2019 - {{ currentYear }} {{ name }}
+      Copyright © <span v-if="year">{{ year }} -</span> {{ currentYear }} {{ name }}
       <span v-if="siteIcp">
         &nbsp;&amp;&nbsp;
         <a href="https://beian.miit.gov.cn" target="_blank">
@@ -14,11 +14,13 @@
 import { ref } from 'vue';
 
 const currentYear = ref<number>(new Date().getFullYear());
-const siteIcp = ref(import.meta.env.VITE_SITE_ICP);
+const siteIcp = ref(import.meta.env.VITE_FT_ICP);
 const name = ref(import.meta.env.VITE_DESC_NAME);
+const year = ref(import.meta.env.VITE_FT_STARTYEAR);
 </script>
 
 <style lang="scss" scoped>
+/* Footer样式 */
 .footer {
   position: absolute;
   display: flex;
@@ -38,6 +40,7 @@ color: var(--main-text-color);
 }
 
 
+/* 自适应 */
 @media all and (max-height: 490px) {
 .footer {
   display: none;

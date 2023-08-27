@@ -27,6 +27,7 @@ const label = SocialLinks.title;
 </script>
 
 <style scoped lang="scss">
+/* Social图标样式 */
 nav {
     display: inline-block;
     position: absolute;
@@ -88,6 +89,7 @@ i:hover {
     position: relative;
 }
 
+/* 自适应 */
 @media all and (max-width: 1100px) {
     .item--social {
         margin-top: 5px;
