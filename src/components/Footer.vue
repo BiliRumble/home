@@ -38,7 +38,7 @@ color: var(--main-text-color);
 }
 
 
-@media all and (max-height: 450px) {
+@media all and (max-height: 490px) {
 .footer {
   display: none;
 }
