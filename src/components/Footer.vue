@@ -38,9 +38,9 @@ a {
 }
 
 
-@media all and (max-height: 450px) {
+@media (max-height: 450px) and all {
   .footer {
-    visibility: visible;
+    display: none;
   }
 }
 </style>
