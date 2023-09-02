@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-      Copyright © <span v-if="year">{{ year }} -</span> {{ currentYear }} {{ name }}
+      Copyright © <span v-if="year">&nbsp;{{ year }} -</span> {{ currentYear }} {{ name }}
       <span v-if="siteIcp">
         &nbsp;&amp;&nbsp;
         <a href="https://beian.miit.gov.cn" target="_blank">
