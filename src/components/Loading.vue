@@ -24,7 +24,7 @@ export default {
           // 删除元素
           const loaderWrapper = document.getElementById('loader-wrapper');
           loaderWrapper?.parentNode?.removeChild(loaderWrapper);
-        }, 300);
+        }, 500);
       };
     });
 
@@ -172,6 +172,6 @@ export default {
 /* 渐隐效果 */
 .fade-out {
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.5s;
 }
 </style>
