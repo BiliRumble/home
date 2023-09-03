@@ -24,7 +24,7 @@ export default {
           // 删除元素
           const loaderWrapper = document.getElementById('loader-wrapper');
           loaderWrapper?.parentNode?.removeChild(loaderWrapper);
-        }, 300);
+        }, 500);
       };
     });
 
