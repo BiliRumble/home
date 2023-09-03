@@ -60,45 +60,32 @@ export default {
   border-radius: 50%;
   border: 3px solid transparent;
   border-top-color: #fff;
-  -webkit-animation: spin 2s linear infinite;
-  -ms-animation: spin 2s linear infinite;
-  -moz-animation: spin 2s linear infinite;
-  -o-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
   z-index: 1001;
 }
 
-#loader:before {
+#loader:before,
+#loader:after {
   content: "";
   position: absolute;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #fff;
+}
+
+#loader:before {
   top: 5px;
   left: 5px;
   right: 5px;
   bottom: 5px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  border-top-color: #fff;
-  -webkit-animation: spin 3s linear infinite;
-  -moz-animation: spin 3s linear infinite;
-  -o-animation: spin 3s linear infinite;
-  -ms-animation: spin 3s linear infinite;
   animation: spin 3s linear infinite;
 }
 
 #loader:after {
-  content: "";
-  position: absolute;
   top: 15px;
   left: 15px;
   right: 15px;
   bottom: 15px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  border-top-color: #fff;
-  -moz-animation: spin 1.5s linear infinite;
-  -o-animation: spin 1.5s linear infinite;
-  -ms-animation: spin 1.5s linear infinite;
-  -webkit-animation: spin 1.5s linear infinite;
   animation: spin 1.5s linear infinite;
 }
 
@@ -109,7 +96,6 @@ export default {
   height: 100%;
   background: var(--body-background-color);
   z-index: 1000;
-  -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 
@@ -147,24 +133,11 @@ export default {
 }
 
 /* 动画 */
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes spin {
   0% {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }

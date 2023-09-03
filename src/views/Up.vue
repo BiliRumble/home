@@ -1,7 +1,11 @@
 <template>
   <div class="Up">
     <Header/>
+
+    <!-- 分割线 -->
     <hr class="hr">
+
+    <!-- 一言组件 -->
     <Hitokoto/>
   </div>
 </template>
@@ -12,6 +16,7 @@ import Hitokoto from '@/components/Hitokoto.vue';
 </script>
 
 <style scoped lang="scss">
+/* 分割线样式 */
 .hr {
   width: 50%;
   margin: 20px auto;

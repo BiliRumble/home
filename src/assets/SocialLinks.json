@@ -1,21 +1,26 @@
-[{
-    "name": "Github",
-    "title": "github",
-    "icon": "fa-brands fa-github",
-    "url": "https://github.com/bilirumble/"
-}, {
-    "name": "QQ",
-    "title": "qq",
-    "icon": "fa-brands fa-qq",
-    "url": "https://wpa.qq.com/msgrd?v=3&uin=2951327332&site=qq&menu=yes"
-}, {
-    "name": "BiliBili",
-    "title": "bilibili",
-    "icon": "fa-brands fa-bilibili",
-    "url": "https://space.bilibili.com/475403704/"
-}, {
-    "name": "Email",
-    "title": "email",
-    "icon": "fa-solid fa-envelope",
-    "url": "mailto:bilirumble@outlook.com"
-}]
+[
+    {
+      "name": "Github",
+      "title": "github",
+      "icon": "fa-brands fa-github",
+      "url": "https://github.com/bilirumble/"
+    },
+    {
+      "name": "QQ",
+      "title": "qq",
+      "icon": "fa-brands fa-qq",
+      "url": "https://wpa.qq.com/msgrd?v=3&uin=2951327332&site=qq&menu=yes"
+    },
+    {
+      "name": "BiliBili",
+      "title": "bilibili",
+      "icon": "fa-brands fa-bilibili",
+      "url": "https://space.bilibili.com/475403704/"
+    },
+    {
+      "name": "Email",
+      "title": "email",
+      "icon": "fa-solid fa-envelope",
+      "url": "mailto:bilirumble@outlook.com"
+    }
+]

@@ -1,4 +1,4 @@
-/* 引入css */
+/* 引入字体和图标库 */
 @import url("https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.css");
 @import url("https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css");
 
@@ -15,8 +15,7 @@
   user-select: none;
 }
 
-html,
-body {
+html, body {
   width: 100%;
   height: 100%;
   background-color: var(--body-background-color);

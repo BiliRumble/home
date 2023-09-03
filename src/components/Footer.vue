@@ -1,12 +1,14 @@
 <template>
   <footer class="footer">
-      Copyright © <span v-if="year">&nbsp;{{ year }} -</span> {{ currentYear }} {{ name }}
-      <span v-if="siteIcp">
-        &nbsp;&amp;&nbsp;
-        <a href="https://beian.miit.gov.cn" target="_blank">
-          {{ siteIcp }}
-        </a>
-      </span>
+    Copyright ©
+    <span v-if="year">&nbsp;{{ year }}&nbsp;-&nbsp;</span>
+    {{ currentYear }} {{ name }}
+    <span v-if="siteIcp">
+      &nbsp;&amp;&nbsp;
+      <a href="https://beian.miit.gov.cn" target="_blank">
+        {{ siteIcp }}
+      </a>
+    </span>
   </footer>
 </template>
 
@@ -22,7 +24,7 @@ const year = ref(import.meta.env.VITE_FT_STARTYEAR);
 <style lang="scss" scoped>
 /* Footer样式 */
 .footer {
-  position: absolute;
+  position: fixed; /* 修改为 fixed 定位，使其始终位于页面底部 */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,15 +37,14 @@ const year = ref(import.meta.env.VITE_FT_STARTYEAR);
 }
 
 a {
-text-decoration: none;
-color: var(--main-text-color);
+  text-decoration: none;
+  color: var(--main-text-color);
 }
-
 
 /* 自适应 */
 @media all and (max-height: 490px) {
-.footer {
-  display: none;
-}
+  .footer {
+    display: none; /* 当页面高度小于 490px 时隐藏 footer */
+  }
 }
 </style>
