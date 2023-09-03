@@ -1,13 +1,13 @@
 <template>
-    <div id="hitokotobox" @click="refreshHitokoto">
-      <p id="hitokoto" class="hitokoto">
-        {{ hitokoto }}<br />
-        -「<strong>{{ from }}</strong>」
-      </p>
-    </div>
-  </template>
-  
-  <script setup lang="ts">
+  <div id="hitokotobox" @click="refreshHitokoto">
+    <p id="hitokoto" class="hitokoto">
+      {{ hitokoto }}<br />
+      -「<strong>{{ from }}</strong>」
+    </p>
+  </div>
+</template>
+
+<script setup lang="ts">
   import { ref, onMounted } from 'vue';
   import axios from 'axios';
   
@@ -33,9 +33,9 @@
   onMounted(() => {
     refreshHitokoto();
   });
-  </script>
-  
-  <style scoped>
+</script>
+
+<style scoped>
   /* 一言样式 */
   .hitokoto {
     text-align: center;
@@ -52,4 +52,4 @@
       text-align: center;
     }
   }
-  </style>
+</style>

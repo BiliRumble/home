@@ -1,19 +1,19 @@
 <template>
-    <div>
-      <img class="avatar" src="/images/avatar.png" alt="avatar" />
-      <h1 class="name">{{ name }}</h1>
-      <p class="description">{{ des }}</p>
-    </div>
-  </template>
-  
-  <script setup lang="ts">
+  <div>
+    <img class="avatar" src="/images/avatar.png" alt="avatar" />
+    <h1 class="name">{{ name }}</h1>
+    <p class="description">{{ des }}</p>
+  </div>
+</template>
+
+<script setup lang="ts">
   import { ref } from 'vue';
   
   const name = ref(import.meta.env.VITE_DESC_NAME);
   const des = ref(import.meta.env.VITE_DESC_DES);
-  </script>
-  
-  <style lang="scss" scoped>
+</script>
+
+<style lang="scss" scoped>
   /* Header样式 */
   .avatar {
     text-align: center;
@@ -33,7 +33,7 @@
   .avatar:hover {
     transform: rotate(360deg);
   }
-  
+ 
   .name {
     font-size: 2.5em;
     text-align: center;
@@ -58,7 +58,7 @@
     .name {
       font-size: 2em;
     }
-  
+
     .description {
       font-size: 1em;
     }
@@ -68,10 +68,10 @@
     .name {
       margin-bottom: 0.1em;
       font-size: 1.5em;
-    }
-  
+   }
+
     .description {
       font-size: 0.9em;
     }
   }
-  </style>
+</style>
