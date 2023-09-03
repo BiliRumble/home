@@ -1,9 +1,8 @@
 <template>
-  <div v-if="show" id="loader-wrapper">
+  <div id="loader-wrapper" :class="{ 'fade-out': !show }">
     <div id="loader"></div>
     <div class="loader-section section-left"></div>
     <div class="loader-section section-right"></div>
-
     <div class="loader-text">
       <span class="name">{{ title }}</span>
       <p class="tip">加载中</p>
@@ -14,22 +13,28 @@
 <script lang="ts">
 import { onMounted, ref } from 'vue';
 
-
 export default {
   setup() {
     const show = ref(true);
 
-    window.onload = ()=> {
+    onMounted(() => {
+      window.onload = () => {
         show.value = false;
-    }
+        setTimeout(() => {
+          // 删除元素
+          const loaderWrapper = document.getElementById('loader-wrapper');
+          loaderWrapper?.parentNode?.removeChild(loaderWrapper);
+        }, 300);
+      };
+    });
 
     const title = ref(import.meta.env.VITE_SITE_TITLE);
 
     return {
       show,
-      title
+      title,
     };
-  }
+  },
 };
 </script>
 
@@ -54,7 +59,7 @@ export default {
   margin: -75px 0 0 -75px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #FFF;
+  border-top-color: #fff;
   -webkit-animation: spin 2s linear infinite;
   -ms-animation: spin 2s linear infinite;
   -moz-animation: spin 2s linear infinite;
@@ -72,7 +77,7 @@ export default {
   bottom: 5px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #FFF;
+  border-top-color: #fff;
   -webkit-animation: spin 3s linear infinite;
   -moz-animation: spin 3s linear infinite;
   -o-animation: spin 3s linear infinite;
@@ -89,7 +94,7 @@ export default {
   bottom: 15px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #FFF;
+  border-top-color: #fff;
   -moz-animation: spin 1.5s linear infinite;
   -o-animation: spin 1.5s linear infinite;
   -ms-animation: spin 1.5s linear infinite;
@@ -147,7 +152,6 @@ export default {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
@@ -159,10 +163,15 @@ export default {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+
+/* 渐隐效果 */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 </style>
