@@ -14,45 +14,45 @@
   </div>
 </template>
 
-<script setup>
-  import SocialLinks from "@/assets/SocialLinks.json";
+<script setup lang="ts">
+import SocialLinks from "@/assets/SocialLinks.json";
 </script>
 
 <style scoped lang="scss">
-  /* Social图标样式 */
-  .social {
-    margin-top: 10px;
+/* Social图标样式 */
+.social {
+  margin-top: 10px;
 
-    .list {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+  .list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 
-      .item {
-        list-style-type: none;
+    .item {
+      list-style-type: none;
 
-        a {
-          border: 0;
-          padding: 6px 8px 6px 9px;
+      a {
+        border: 0;
+        padding: 6px 8px 6px 9px;
 
-          i {
-            font-weight: normal;
-            font-style: normal;
-            font-size: 18px;
-            color: rgba(255, 255, 255, 0.9);
-            transition: all 0.3s;
-          }
-    
-          i:hover {
-            transform: translateY(-2px) scale(1.01, 1.01);
-            color: rgb(255, 255, 255);
-          }
+        i {
+          font-weight: normal;
+          font-style: normal;
+          font-size: 18px;
+          color: rgba(255, 255, 255, 0.9);
+          transition: all 0.3s;
+        }
 
-          .label {
-            display: none;
-          }
+        i:hover {
+          transform: translateY(-2px) scale(1.01, 1.01);
+          color: rgb(255, 255, 255);
+        }
+
+        .label {
+          display: none;
         }
       }
     }
   }
+}
 </style>

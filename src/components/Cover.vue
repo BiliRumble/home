@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
   /* 背景样式 */
   .cover {
     width: 100%;

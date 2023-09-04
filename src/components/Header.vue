@@ -13,7 +13,7 @@
   const des = ref(import.meta.env.VITE_DESC_DES);
 </script>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
   /* Header样式 */
   .avatar {
     text-align: center;

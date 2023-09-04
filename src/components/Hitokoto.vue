@@ -35,7 +35,7 @@
   });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   /* 一言样式 */
   .hitokoto {
     text-align: center;
