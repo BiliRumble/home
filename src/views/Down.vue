@@ -6,7 +6,7 @@
   </div>
 </template>
   
-<script setup>
+<script setup lang="ts">
   import SocialLinks from '@/components/SocialLinks.vue';
   import Buttons from '@/components/Buttons.vue'
 </script>
