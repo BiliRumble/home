@@ -21,7 +21,7 @@
   const year = ref(import.meta.env.VITE_FT_STARTYEAR);
 </script>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
   /* Footer样式 */
   .footer {
     position: fixed; /* 修改为 fixed 定位，使其始终位于页面底部 */

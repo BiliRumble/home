@@ -1,5 +1,6 @@
 <template>
   <div class="Down">
+    <Buttons />
     <!-- 社交链接组件 -->
     <SocialLinks />
   </div>
@@ -7,6 +8,7 @@
   
 <script setup lang="ts">
   import SocialLinks from '@/components/SocialLinks.vue';
+  import Buttons from '@/components/Buttons.vue'
 </script>
   
 <style scoped lang="scss">
