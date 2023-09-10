@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img class="avatar" src="/images/avatar.png" alt="avatar" />
+    <img class="avatar" :src=avatar alt="avatar" />
     <h1 class="name">{{ name }}</h1>
     <p class="description">{{ des }}</p>
   </div>
@@ -11,6 +11,7 @@
   
   const name = ref(import.meta.env.VITE_DESC_NAME);
   const des = ref(import.meta.env.VITE_DESC_DES);
+  const avatar = ref(import.meta.env.VITE_DESC_AVATAR);
 </script>
 
 <style scoped lang="scss">
