@@ -1,6 +1,7 @@
 <template>
   <div class="Up">
-    <Header />
+    <Avatar />
+    <Desc />
 
     <!-- 分割线 -->
     <hr class="hr">
@@ -11,7 +12,8 @@
 </template>
 
 <script setup lang="ts">
-  import Header from '@/components/Header.vue';
+  import Avatar from '@/components/Avatar.vue';
+  import Desc from '@/components/Desc.vue';
   import Hitokoto from '@/components/Hitokoto.vue';
 </script>
 
