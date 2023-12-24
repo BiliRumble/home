@@ -16,14 +16,12 @@
   /* Desc样式 */
   .name {
     font-size: 2.5em;
-    text-align: center;
     color: var(--main-text-color);
     transition: all 1.00s ease;
   }
   
   .description {
     font-size: 1em;
-    text-align: center;
     color: var(--main-text-color);
     transition: all 1.00s ease;
   }

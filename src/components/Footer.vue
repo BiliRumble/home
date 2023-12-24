@@ -24,7 +24,7 @@
 <style scoped lang="scss">
   /* Footer样式 */
   .footer {
-    position: fixed; /* 修改为 fixed 定位，使其始终位于页面底部 */
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
