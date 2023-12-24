@@ -1,5 +1,5 @@
 <template>
-    <canvas ref="canvas" class="canvas"></canvas>
+    <canvas ref="snowCanvas" class="canvas"></canvas>
 </template>
 
 <script>
@@ -38,7 +38,7 @@ export default {
     },
 
     mounted() {
-        this.canvas = this.$refs.canvas;
+        this.canvas = this.$refs.snowCanvas;
         this.ctx = this.canvas.getContext('2d');
         this.init();
     },

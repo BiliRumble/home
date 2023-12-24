@@ -18,6 +18,14 @@
 </script>
 
 <style scoped lang="scss">
+  .Up {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
   /* 分割线样式 */
   .hr {
     width: 50%;

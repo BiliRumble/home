@@ -40,7 +40,12 @@
   .hitokoto {
     text-align: center;
     color: var(--main-text-color);
-    transition: all 1.00s ease;
+    
+  }
+
+  .hitokoto:hover {
+    font-weight: bolder;
+    color: rgb(250, 250, 250);
   }
   
   /* 自适应 */

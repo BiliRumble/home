@@ -10,13 +10,10 @@
 <style scoped lang="scss">
   /* Header样式 */
   .avatar {
-    text-align: center;
-    display: block;
     border-radius: 50%;
     width: 128px;
     height: 128px;
     margin: 0 auto;
-    position: relative;
     overflow: hidden;
     background: rgb(136, 172, 219);
     box-shadow: 5px 5px 5px 10px rgba(255, 255, 255, 0),
