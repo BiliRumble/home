@@ -4,7 +4,7 @@ import {
   IconButton,
   useColorMode,
 } from '@chakra-ui/react';
-import { PropsWithChildren, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { IconType } from 'react-icons';
 import {
   FaDiscord,
@@ -37,8 +37,8 @@ function SocialLink({ icon: Icon, href, color }: SocialLinkProps) {
 
 export default function Navbar() {
   const screen = useScreen();
-  const isSmall = screen == 'tablet' || screen == 'mobile';
-  const isMid = screen == 'laptop';
+  const isSmall = screen === 'tablet' || screen === 'mobile';
+  const isMid = screen === 'laptop';
 
   const { colorMode } = useColorMode();
   const bg = colorMode === 'light' ? '#dddb' : '#333b';
