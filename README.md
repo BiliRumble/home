@@ -1,53 +1,46 @@
-# rumble的主页
-闲的蛋疼，用vue搓了一个主页。
+# Getting Started with Create React App
 
-## 部署
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-* **安装** [node.js](https://nodejs.org/zh-cn/) **环境**
+## Available Scripts
 
-  > node > 16.16.0  
-  > npm > 8.15.0  
-  > yarn > 1.22.19
-  
-* 然后以 **管理员权限** 运行 `cmd` 终端，并 `cd` 到 项目根目录
-* 在 `终端` 中输入：
+In the project directory, you can run:
 
-```bash
-# 安装依赖
-yarn install
+### `npm start`
 
-# 预览
-yarn dev
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-# 构建
-yarn build
-```
-> 构建完成后，静态资源会在 **`dist` 目录** 中生成，可将 **`dist` 文件夹下的文件**上传至服务器，也可使用 `Vercel` 等托管平台一键导入并自动部署
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-## 关于
+### `npm test`
 
-### 灵感来源
-* [DMEGO Home](https://i.dmego.cn/)
-* [無名の主页](https://www.imsyy.top/)
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### 功能
+### `npm run build`
 
-- [x] 载入动画
-- [x] Hitokoto 一言
-- [x] 移动端适配
-- [x] 特殊日期变灰
-- [x] 完成载入后的隐藏和其他动画
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### 代办
-- [x] 无
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### 技术栈
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-* [Vue 3](https://cn.vuejs.org/)
-* [Vite](https://vitejs.cn/vite3-cn/)
-* [TypeScript](https://www.typescriptlang.org/)
-* [Scss](https://sass-lang.com/)
+### `npm run eject`
 
-### API
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-* [Hitokoto 一言](https://hitokoto.cn/)
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
