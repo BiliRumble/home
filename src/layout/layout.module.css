@@ -15,9 +15,39 @@
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .layout {
+    background-size: 200%;
+  }
+
+  @keyframes bg-loop {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 250% 100vh;
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .layout {
-    background-size: 75%;
+    background-size: 250%;
+  }
+
+  @keyframes bg-loop {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 500% 100vh;
+    }
+  }
+}
+
+@media screen and (max-width: 512px) {
+  .layout {
+    background-size: 350%;
   }
 
   @keyframes bg-loop {

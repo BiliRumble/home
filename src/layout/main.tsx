@@ -115,9 +115,10 @@ export default function Main() {
 
         <Flex
           flexDirection={'row'}
+          flexWrap={'wrap'}
+          justifyContent={'center'}
           gap={'20px'}
           my={'70px'}
-          flexWrap={'wrap'}
         >
           {PROJECTS.map(({ description, ...work }, i) => (
           <ProjectCard key={i} {...work}>
