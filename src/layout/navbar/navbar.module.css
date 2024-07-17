@@ -1,0 +1,53 @@
+.navbar {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 99;
+  transition: all 0.3s;
+}
+
+.content {
+  padding: 10px 2.5%;
+  width: 95%;
+  align-items: center;
+}
+
+button {
+    background: transparent;
+    padding: 0;
+    border-width:0px;
+    outline:none;
+}
+
+.section {
+  align-items: center;
+  gap: 15px;
+}
+
+.brand {
+  gap: 5px;
+  font-size: 25px;
+  line-height: 100%;
+}
+
+a {
+  font-family: rainyhearts;
+  font-size: 22px;
+  background-color: transparent;
+  color: inherit;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+}
+
+.link {
+  font-size: 15px;
+}
+
+.title {
+  font-family: rainyhearts;
+  background: #f650ff;
+  background: var(--main-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

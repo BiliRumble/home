@@ -13,7 +13,7 @@ const languages: SkillGroup = {
     'JavaScript',
     'Markdown',
     'Sass',
-    'SQL(just a little)',
+    'SQL',
     'TypeScript',
   ],
 };
@@ -24,9 +24,9 @@ const frameworks: SkillGroup = {
     'ChakraUI',
     'Express',
     'GitHub Actions',
+    'Junit',
     'JWT',
     'React',
-    'TailwindCSS',
     'Vite',
   ],
 };
@@ -42,7 +42,7 @@ const tools: SkillGroup = {
     'Gradle',
     'Nginx',
     'OBS',
-    'Jetbrains IDEA',
+    'Intellij IDEA',
     'Ubuntu',
     'Visual Studio Code',
   ],
