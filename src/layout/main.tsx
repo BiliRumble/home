@@ -24,14 +24,27 @@ export default function Main() {
 
   useEffect(() => {
     const fetchHitokoto = async () => {
-      const data = (await get("https://international.v1.hitokoto.cn")).data;
+      if (hitokoto !== '') return;
+
+      const url = localStorage.getItem("geo") === "CN" ? "https://v1.hitokoto.cn" : "https://international.v1.hitokoto.cn";
+
+      const data = (await get(url)).data;
       const hitokotomsg = `${data.hitokoto}`;
       setHitokoto(hitokotomsg);
     }
-    if (hitokoto !== '') return;
     
+    const getGeo = async () => {
+      if (localStorage.getItem("geo") !== null) return;
+
+      const data = (await get('https://ipapi.co/json/')).data;
+      localStorage.setItem("geo", data.country);
+    }
+    
+    getGeo();
     fetchHitokoto();
   });
+  
+  const avatar = localStorage.getItem("geo") === "CN" ? "https://q.qlogo.cn/headimg_dl?dst_uin=2951327332&spec=640&img_type=jpg" : "https://avatars.githubusercontent.com/u/109781840?v=4";
 
   return (
     <Flex
@@ -44,8 +57,8 @@ export default function Main() {
       zIndex={'10'}
     >
       <Image
-        alt="rumble's GitHub avatar"
-        src={'https://avatars.githubusercontent.com/u/109781840?v=4'}
+        alt="rumble's avatar"
+        src={avatar}
         borderRadius={'50%'}
         className={styles.avatar}
       />
