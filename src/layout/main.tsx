@@ -1,5 +1,5 @@
 import { Box, Flex, Heading, Image, Text } from '@chakra-ui/react';
-import { FaClock, FaHeart, FaTag } from 'react-icons/fa';
+import { FaClock, FaTag } from 'react-icons/fa';
 
 import useGTM from '../hooks/useGTM';
 import useScreen from '../hooks/useScreen';
@@ -9,12 +9,27 @@ import PROJECTS from '../data/Projects';
 import { SectionTitle } from '../components/Setion/title/sectionTitle';
 import { DevBadge } from '../components/devBadge/devBadge';
 import { ProjectCard } from '../components/Cards/ProjectCard/projectCard';
+import { useEffect, useState } from 'react';
+import { get } from '../utils/useHttpTools';
 
 export default function Main() {
+  const [hitokoto, setHitokoto] = useState<string>('');
+
   const screen = useScreen();
   const isSmall = screen === 'tablet' || screen === 'mobile';
 
   const time = useGTM(+8);
+
+  useEffect(() => {
+    const fetchHitokoto = async () => {
+      const data = (await get("https://international.v1.hitokoto.cn")).data;
+      const hitokotomsg = `${data.hitokoto}`;
+      setHitokoto(hitokotomsg);
+    }
+    if (hitokoto !== '') return;
+    
+    fetchHitokoto();
+  });
 
   return (
     <Flex
@@ -54,7 +69,7 @@ export default function Main() {
         </Section>
 
         <Section p={'10px 20px'} alignItems={'center'} gap={'7px'}>
-          <FaHeart size={'15px'} /> otto: 我喜欢你
+          {hitokoto}
         </Section>
       </Flex>
 
