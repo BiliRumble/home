@@ -12,6 +12,8 @@ import { ProjectCard } from '../components/Cards/ProjectCard/projectCard';
 import { useEffect, useState } from 'react';
 import { get } from '../utils/useHttpTools';
 
+import styles from './main.module.css';
+
 export default function Main() {
   const [hitokoto, setHitokoto] = useState<string>('');
 
@@ -45,7 +47,7 @@ export default function Main() {
         alt="rumble's GitHub avatar"
         src={'https://avatars.githubusercontent.com/u/109781840?v=4'}
         borderRadius={'50%'}
-        width={'10vw'}
+        className={styles.avatar}
       />
 
       <Heading size={isSmall ? '2xl' : '4xl'}>Hi!🤪 I&apos;m bilirumble</Heading>

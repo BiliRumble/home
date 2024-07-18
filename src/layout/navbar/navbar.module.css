@@ -14,10 +14,17 @@
 }
 
 button {
-    background: transparent;
-    padding: 0;
-    border-width:0px;
-    outline:none;
+  background: transparent;
+  padding: 0;
+  border-width:0px;
+  outline:none;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+button > svg {
+  width: 100%;
+  height: 100%;
 }
 
 .section {

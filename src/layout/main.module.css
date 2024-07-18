@@ -1,0 +1,45 @@
+.avatar {
+  width: 10vw;
+}
+
+@media screen and (max-width: 1000px) {
+    .avatar {
+        width: 15vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .avatar {
+        width: 20vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .avatar {
+        width: 30vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .avatar {
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .avatar {
+        width: 50vw;
+    }
+}
+
+@media screen and (max-width: 200px) {
+    .avatar {
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width: 100px) {
+    .avatar {
+        width: 70vw;
+    }
+}
