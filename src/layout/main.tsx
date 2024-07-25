@@ -25,19 +25,28 @@ export default function Main() {
   useEffect(() => {
     const fetchHitokoto = async () => {
       if (hitokoto !== '') return;
+      try {
+        const url = localStorage.getItem("geo") === "CN" ? "https://v1.hitokoto.cn" : "https://international.v1.hitokoto.cn";
 
-      const url = localStorage.getItem("geo") === "CN" ? "https://v1.hitokoto.cn" : "https://international.v1.hitokoto.cn";
-
-      const data = (await get(url)).data;
-      const hitokotomsg = `${data.hitokoto}`;
-      setHitokoto(hitokotomsg);
+        const data = (await get(url)).data;
+        const hitokotomsg = `${data.hitokoto}`;
+        setHitokoto(hitokotomsg);
+      } catch (e) {
+        console.log(e);
+        setHitokoto('Hitokoto API Error');
+      }
     }
     
     const getGeo = async () => {
       if (localStorage.getItem("geo") !== null) return;
 
-      const data = (await get('https://ipapi.co/json/')).data;
-      localStorage.setItem("geo", data.country);
+      try {
+        const data = (await get('https://ipapi.co/json/')).data;
+        localStorage.setItem("geo", data.country);
+      } catch (e) {
+        console.log(e);
+        localStorage.setItem("geo", "CN"); // 猜一波,连不上一般是大陆的
+      }
     }
     
     getGeo();
@@ -74,16 +83,19 @@ export default function Main() {
         fontFamily={'rainyhearts'}
         userSelect={'none'}
         gap={'10px'}
+        className={styles.siminfo}
       >
-        <Section p={'10px 20px'} alignItems={'center'} gap={'7px'}>
-          <FaClock size={'15px'} /> {time}
-        </Section>
+        <Flex width={'100%'}>
+          <Section p={'10px 20px'} alignItems={'center'} gap={'7px'} width={'45%'} marginRight={'2.5%'}>
+            <FaClock size={'15px'} /> {time}
+          </Section>
 
-        <Section p={'10px 20px'} alignItems={'center'} gap={'7px'}>
-          <FaTag size={'15px'} /> He/Him/他
-        </Section>
+          <Section p={'10px 20px'} width={'50%'} alignItems={'center'} gap={'7px'}>
+            <FaTag size={'15px'} /> He/Him/他
+          </Section>
+        </Flex>
 
-        <Section p={'10px 20px'} alignItems={'center'} gap={'7px'}>
+        <Section marginLeft={hitokoto.length < 5 ? '5%' : '1%'} width={'auto'} p={'10px 20px'} alignItems={'center'} gap={'7px'}>
           {hitokoto}
         </Section>
       </Flex>
