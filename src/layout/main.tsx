@@ -86,16 +86,16 @@ export default function Main() {
         className={styles.siminfo}
       >
         <Flex width={'100%'}>
-          <Section p={'10px 20px'} alignItems={'center'} gap={'7px'} width={'45%'} marginRight={'2.5%'}>
+          <Section className={styles.time} p={'10px 20px'} alignItems={'center'} gap={'7px'}>
             <FaClock size={'15px'} /> {time}
           </Section>
 
-          <Section p={'10px 20px'} width={'50%'} alignItems={'center'} gap={'7px'}>
+          <Section className={styles.tags} p={'10px 20px'} alignItems={'center'} gap={'7px'}>
             <FaTag size={'15px'} /> He/Him/他
           </Section>
         </Flex>
 
-        <Section marginLeft={hitokoto.length < 5 ? '5%' : '1%'} width={'auto'} p={'10px 20px'} alignItems={'center'} gap={'7px'}>
+        <Section className={styles.hitokoto} width={'auto'} p={'10px 20px'} alignItems={'center'} gap={'7px'}>
           {hitokoto}
         </Section>
       </Flex>

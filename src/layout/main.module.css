@@ -1,6 +1,16 @@
 .avatar {
   width: 10vw;
 }
+.time {
+    width: '45%';
+    margin-right: '2.5%';
+}
+.tags {
+    width: '52.5%';
+}
+.hitokoto {
+    margin-left: 5%;
+}
 
 @media screen and (max-width: 1000px) {
     .avatar {
@@ -8,6 +18,16 @@
     }
     .siminfo {
         flex-direction: column;
+    }
+    .time {
+        width: 47.5%;
+        margin-right: 5%;
+    }
+    .tags {
+        width: 47.5%;
+    }
+    .hitokoto {
+        margin-left: 0;
     }
 }
 
