@@ -94,7 +94,7 @@ export default function Navbar() {
             <SocialLink
               href={'https://wpa.qq.com/msgrd?v=3&uin=2951327332&site=qqq&menu=yes'}
               icon={FaQq}
-              color={'#0252D5'}
+              color={'#777777'}
             />
           </Flex>
         )}
