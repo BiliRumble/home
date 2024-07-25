@@ -2,14 +2,7 @@
   width: 10vw;
 }
 .time {
-    width: '45%';
-    margin-right: '2.5%';
-}
-.tags {
-    width: '52.5%';
-}
-.hitokoto {
-    margin-left: 5%;
+    margin-right: 15px
 }
 
 @media screen and (max-width: 1000px) {
@@ -28,6 +21,9 @@
     }
     .hitokoto {
         margin-left: 0;
+    }
+    .infos {
+        width: 100%;
     }
 }
 

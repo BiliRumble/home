@@ -24,7 +24,7 @@ const CanvasBackground = () => {
       return;
     }
 
-    const particlecount = window.innerWidth > 0 ? window.innerWidth > 768 ? Math.max(100, Math.min(500, window.innerWidth / 2)) : Math.max(25, Math.min(50, window.innerWidth / 2)) : 1;
+    const particlecount = window.innerWidth > 0 ? window.innerWidth > 768 ? Math.max(100, Math.min(500, window.innerWidth / 2)) : Math.max(10, Math.min(25, window.innerWidth / 2)) : 1;
     console.debug("[BGPL] will create %1 particles.", particlecount);
 
     window.addEventListener("resize", resizeCanvas);

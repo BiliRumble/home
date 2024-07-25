@@ -85,7 +85,7 @@ export default function Main() {
         gap={'10px'}
         className={styles.siminfo}
       >
-        <Flex width={'100%'}>
+        <Flex className={styles.infos}>
           <Section className={styles.time} p={'10px 20px'} alignItems={'center'} gap={'7px'}>
             <FaClock size={'15px'} /> {time}
           </Section>
