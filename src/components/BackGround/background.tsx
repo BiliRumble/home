@@ -20,12 +20,12 @@ const CanvasBackground = () => {
     if (particles.length > 0) return;
 
     if (!canvas) {
-      console.error("[BGPL] Unable to get canvas element");
+      console.error("[BGPL E] Unable to get canvas element");
       return;
     }
 
     const particlecount = window.innerWidth > 0 ? window.innerWidth > 768 ? Math.max(100, Math.min(500, window.innerWidth / 2)) : Math.max(10, Math.min(25, window.innerWidth / 2)) : 1;
-    console.debug("[BGPL] will create %1 particles.", particlecount);
+    console.debug("[BGPL] will create " + particlecount + " particles.");
 
     window.addEventListener("resize", resizeCanvas);
     resizeCanvas();
@@ -39,7 +39,7 @@ const CanvasBackground = () => {
     const context = canvas.getContext("2d");
 
     if (!context) {
-      console.error("[BGPL] Unable to get canvas context");
+      console.error("[BGPL E] Unable to get canvas context");
       return;
     }
 
@@ -59,7 +59,7 @@ const CanvasBackground = () => {
 
     function drawParticles() {
       if (!context || !canvas) {
-        console.error("[BGPL] Unable to get canvas context");
+        console.error("[BGPL E] Unable to get canvas context");
         return;
       }
 

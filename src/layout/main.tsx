@@ -17,41 +17,90 @@ import styles from './main.module.css';
 export default function Main() {
   const [hitokoto, setHitokoto] = useState<string>('');
 
+  const noreset = "";
+
   const screen = useScreen();
   const isSmall = screen === 'tablet' || screen === 'mobile';
 
   const time = useGTM(+8);
 
   useEffect(() => {
-    const fetchHitokoto = async () => {
-      if (hitokoto !== '') return;
-      try {
-        const url = localStorage.getItem("geo") === "CN" ? "https://v1.hitokoto.cn" : "https://international.v1.hitokoto.cn";
-
-        const data = (await get(url)).data;
-        const hitokotomsg = `${data.hitokoto}`;
-        setHitokoto(hitokotomsg);
-      } catch (e) {
-        console.log(e);
-        setHitokoto('Hitokoto API Error');
-      }
-    }
-    
-    const getGeo = async () => {
-      if (localStorage.getItem("geo") !== null) return;
-
-      try {
-        const data = (await get('https://ipapi.co/json/')).data;
-        localStorage.setItem("geo", data.country);
-      } catch (e) {
-        console.log(e);
-        localStorage.setItem("geo", "CN"); // 猜一波,连不上一般是大陆的
-      }
-    }
-    
-    getGeo();
-    fetchHitokoto();
+    fetchHitokoto()
+    getGeo()
   });
+  
+  const fetchHitokoto = async () => {
+    if (hitokoto.length > 0) return;
+    let lastFetchTime = 0;
+
+    const currentTime = new Date().getTime();
+    if (currentTime - lastFetchTime < 60000) {
+      console.debug('Hitokoto fetch rate limit exceeded');
+      return;
+    }
+
+    lastFetchTime = currentTime;
+
+    const cacheKey = 'hitokoto_cache';
+    const cacheSize = 10;
+  
+    try {
+      // 尝试从API获取一言
+      const url = localStorage.getItem("geo") === "CN" ? "https://v1.hitokoto.cn" : "https://international.v1.hitokoto.cn";
+      const response = await get(url);
+      const data = response.data;
+      const hitokotomsg = `${data.hitokoto}`;
+      console.debug("[HITOKOTO D] GET data: ", data);
+  
+      const cache = localStorage.getItem(cacheKey) ? JSON.parse(localStorage.getItem(cacheKey) as string) : [];
+
+      // 检查新数据是否已经存在于缓存中
+      if (cache.includes(hitokotomsg)) {
+        console.debug('[HITOKOTO D] New data already exists in cache.');
+        return;
+      }
+
+      cache.unshift(hitokotomsg);
+      console.debug("[HITOKOTO D] Cache before update: ", cache);
+  
+      if (cache.length > cacheSize) {
+        cache.pop();
+        console.debug("[HITOKOTO D] Cache size exceeded, removed last item.");
+      }
+  
+      localStorage.setItem(cacheKey, JSON.stringify(cache));
+      console.debug("[HITOKOTO D] Cache updated: ", cache);
+  
+      setHitokoto(hitokotomsg);
+    } catch (e) {
+      console.error("[HITOKOTO CATCH E] ", e);
+
+      if (localStorage.getItem(cacheKey) == null) {
+        console.error("[HITOKOTO CATCH E] No cache found, use error msg.");
+        setHitokoto("一言API错误，请稍后再试。");
+        return;
+      }
+
+      let cache = localStorage.getItem(cacheKey) ? JSON.parse(localStorage.getItem(cacheKey) as string) : [];
+      const randomIndex = Math.floor(Math.random() * cache.length);
+      console.debug("[HITOKOTO CATCH W] Will use cache: ", cache[randomIndex]);
+      setHitokoto(cache[randomIndex]);
+    }
+  }    
+  
+  const getGeo = async () => {
+    if (localStorage.getItem("geo") !== null) return;
+
+    try {
+      const data = (await get('https://ipapi.co/json/')).data;
+      localStorage.setItem("geo", data.country);
+      console.debug("[GGIFC D] GET data: ", data)
+    } catch (e) {
+      console.error("[GGIFC E] ", e);
+      localStorage.setItem("geo", "CN"); // 猜一波,连不上一般是大陆的
+      console.warn("[GGIFC W] Guess geo: CN")
+    }
+  }
   
   const avatar = localStorage.getItem("geo") === "CN" ? "https://q.qlogo.cn/headimg_dl?dst_uin=2951327332&spec=640&img_type=jpg" : "https://avatars.githubusercontent.com/u/109781840?v=4";
 
