@@ -17,8 +17,6 @@ import styles from './main.module.css';
 export default function Main() {
   const [hitokoto, setHitokoto] = useState<string>('');
 
-  const noreset = "";
-
   const screen = useScreen();
   const isSmall = screen === 'tablet' || screen === 'mobile';
 
