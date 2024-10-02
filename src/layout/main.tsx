@@ -13,6 +13,7 @@ import { useEffect, useState } from 'react';
 import { get } from '../utils/useHttpTools';
 
 import styles from './main.module.css';
+import Player from '../components/Player/Player';
 
 export default function Main() {
   const [hitokoto, setHitokoto] = useState<string>('');
@@ -112,6 +113,7 @@ export default function Main() {
       mt={'25px'}
       zIndex={'10'}
     >
+      <Player></Player>
       <Image
         alt="rumble's avatar"
         src={avatar}
