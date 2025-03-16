@@ -2,7 +2,7 @@
     <canvas ref="snowCanvas" class="canvas"></canvas>
 </template>
 
-<script>
+<script lang="ts">
 class Snowflake {
     constructor(canvas) {
         this.canvas = canvas;  
