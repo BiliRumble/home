@@ -18,6 +18,12 @@
       "url": "https://space.bilibili.com/475403704/"
     },
     {
+      "name": "Steam",
+      "title": "steam",
+      "icon": "fa-brands fa-steam",
+      "url": "https://steamcommunity.com/id/bilirumble/"
+    },
+    {
       "name": "Email",
       "title": "email",
       "icon": "fa-solid fa-envelope",
