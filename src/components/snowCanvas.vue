@@ -3,6 +3,8 @@
 </template>
 
 <script lang="ts">
+const numberOfSnow = window.innerWidth > 768 ? 125 : 50;
+
 class Snowflake {
     constructor(canvas) {
         this.canvas = canvas;  
@@ -51,7 +53,7 @@ export default {
                 this.canvas.width = window.innerWidth;
                 this.canvas.height = window.innerHeight;
             });
-            for (let i = 0; i < 125; i++) {
+            for (let i = 0; i < numberOfSnow; i++) {
                 this.snowflakes.push(new Snowflake(this.canvas));
             }
             this.animate();
