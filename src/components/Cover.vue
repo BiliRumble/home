@@ -12,7 +12,6 @@ const siteSnow = ref(import.meta.env.VITE_SETTING_WINTERSNOW);
 </script>
 
 <style scoped lang="scss">
-  /* 背景样式 */
   .cover {
     width: 100%;
     height: 100%;
@@ -22,7 +21,6 @@ const siteSnow = ref(import.meta.env.VITE_SETTING_WINTERSNOW);
     background-size: cover;
   }
 
-  /* 遮罩，防止部分雪地背景太亮 */
   .cover::before {
     content: " ";
     position: absolute;

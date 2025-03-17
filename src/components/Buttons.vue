@@ -1,14 +1,11 @@
 <template>
   <div>
-    <nav class="">
+    <nav>
       <ul class="list">
-        <!-- 使用v-for循环渲染按钮链接 -->
         <li class="item" v-for="item in SocialLinks" :key="item.id">
-          <button>
-            <a :href="item.url" :title="item.title" target="_blank">
-              <i :class="item.icon" />
-              <span class="label">{{ item.title }}</span>
-            </a>
+          <button :title="item.title" @click="openUrl(item.url, '_blank')">
+            <i :class="item.icon" />
+            <span class="label">{{ item.title }}</span>
           </button>
         </li>
       </ul>
@@ -18,6 +15,16 @@
   
 <script setup lang="ts">
   import SocialLinks from "@/assets/ButtonLinks.json";
+
+  function openUrl(url: string) {
+    let element = document.createElement("a");
+    element.setAttribute("href", url);
+    element.setAttribute("target", "_blank");
+    element.style.display = "none";
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
 </script>
   
 <style scoped lang="scss">
@@ -33,29 +40,26 @@
       button {
         width: 65px;
         height: 30px;
-        //border: 1.5px solid rgba(255, 255, 255, 0.5);
         border: none;
         border-radius: 5px;
         background-color: rgba(50, 50, 50, 0.3);
-        color: rgba(255, 255, 255, 0.9);
+        color: var(--main-text-color);
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 3px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
 
-        a {
-          margin-top: 3px;
-          margin-bottom: 3px;
-          margin-left: 3px;
-          margin-right: 3px;
-          color: var(--main-text-color);
-          text-decoration: none;
+        &:hover {
+          background-color: rgba(50, 50, 50, 0.5);
+        }
 
-          i {
-            font-weight: normal;
-            font-style: normal;
-            font-size: 18px;
-            margin-right: 5px;
-          }
+        i {
+          font-weight: normal;
+          font-style: normal;
+          font-size: 18px;
+          margin-right: 5px;
         }
       }
     }

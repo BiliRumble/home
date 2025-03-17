@@ -44,7 +44,7 @@ import SocialLinks from "@/assets/SocialLinks.json";
         }
 
         i:hover {
-          transform: translateY(-2px) scale(1.01, 1.01);
+          transform: translateY(-2px);
           color: rgb(255, 255, 255);
         }
 

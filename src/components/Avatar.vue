@@ -11,8 +11,8 @@
   /* Header样式 */
   .avatar {
     border-radius: 50%;
-    width: 128px;
-    height: 128px;
+    width: clamp(128px, 30dvw, 200px);
+    aspect-ratio: 1/1;
     margin: 0 auto;
     overflow: hidden;
     background: rgb(136, 172, 219);
@@ -23,13 +23,5 @@
   
   .avatar:hover {
     transform: rotate(360deg);
-  }
-
-  /* 自适应 */
-  @media all and (max-width: 1100px) {
-    .avatar {
-      width: 100px;
-      height: 100px;
-    }
   }
 </style>

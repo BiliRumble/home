@@ -13,38 +13,15 @@
 </script>
 
 <style scoped lang="scss">
-  /* Desc样式 */
   .name {
-    font-size: 2.5em;
+    font-size: clamp(2.25rem, 2.5dvw + 1rem, 3rem);
     color: var(--main-text-color);
     transition: all 1.00s ease;
   }
   
   .description {
-    font-size: 1em;
+    font-size: clamp(.75em, 1dvw + 0.5em, 1.25em);
     color: var(--main-text-color);
     transition: all 1.00s ease;
-  }
-  
-  /* 自适应 */
-  @media all and (max-width: 1100px) {
-    .name {
-      font-size: 2em;
-    }
-
-    .description {
-      font-size: 1em;
-    }
-  }
-  
-  @media all and (max-width: 340px) {
-    .name {
-      margin-bottom: 0.1em;
-      font-size: 1.5em;
-   }
-
-    .description {
-      font-size: 0.9em;
-    }
   }
 </style>
